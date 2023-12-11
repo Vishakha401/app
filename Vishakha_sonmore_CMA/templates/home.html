@@ -3,7 +3,10 @@
 {% block title %} CMA | Home {% endblock %}
 
 {% block content %}
-<h1 style="text-align: center; color: black">Contact Management</h1>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body style="background-image: url('https://images.hdqwalls.com/download/air-balloon-flight-in-washington-bm-1920x1080.jpg');"></body>
+<h1 style="text-align: left; color: white; background: #3C0393;font-size: 20px; Padding:20px;border-style: outset;"><i class="fa fa-address-book"></i>  Contact Management</h1>
 <div style="display: flex; justify-content: left;">
     <a href="{% url 'addContact' %}" type="button" style="color: white; text-decoration: none; background-color: #167D7F;" class="btn m-2 p-2">Create a New Contact</a>
 </div>
@@ -19,6 +22,7 @@
           </tr>
         </thead>
         <tbody>
+          
           {% if all_contacts %}
             {% for contact in all_contacts %}
               <tr>
