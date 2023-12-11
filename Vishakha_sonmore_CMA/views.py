@@ -15,7 +15,8 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html', {})
-
+def ref(request):
+    return render(request, 'ref.html', {})
 def addContact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST or None)
