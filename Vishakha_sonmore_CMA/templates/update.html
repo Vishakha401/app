@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} CMA | Update Contact {% endblock %}
+
+{% block content %}
+<body style="background-image: url('https://images.hdqwalls.com/wallpapers/white-painted-wood-nr.jpg');">
+
+<div class="w3-card w3-white container">
+  <h1 style="text-align: left; color: white; background: #3C0393;font-size: 20px; Padding:20px;border-style: outset;"><i class="fa fa-address-book"></i> Update existing contact</h1>
+
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="contact_name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="contact_name" name="contact_name" value="{{curr_contact.contact_name}}" required>
+        </div>
+        <div class="mb-3">
+          <label for="contact_email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="contact_email" name="contact_email" aria-describedby="emailHelp" value="{{curr_contact.contact_email}}" required>
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div>
+            <label for="contact_notes" class="form-label">Notes</label>
+            <input type="text" class="form-control" name="contact_notes" id="contact_notes" value="{{curr_contact.contact_notes}}" required>
+        </div>
+        <input type="text" name="created_time" id="created_time" value="{{ created_time }}" hidden>
+        <button type="submit" class="btn m-2" style="background-color: #3C0393; color: white;">Update Contact</button>
+        <a href="{% url 'home' %}" type="button" class="btn m-2" style="border: 2px solid black; ">Go Back</a>
+      </form>
+    </div>
+</div>
+</body>
+
+{% endblock %}
