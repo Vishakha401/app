@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} CMA | Home {% endblock %}
+{% block title %} Vishakha | Home {% endblock %}
 
 {% block content %}
 
@@ -16,10 +16,9 @@
     <table class="table m-3" style="text-align: center;">
         <thead>
           <tr> 
-            <th scope="col" colspan="2" style="text-align: center;">Actions</th>
-            <th scope="col">Contact Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Created/Last updated Time</th>
+            <th scope="col" colspan="2" style="text-align: center;"><i class="material-icons"></i> Actions</th>
+            <th scope="col"><i class="material-icons"></i> Contact Name</th>
+            <th scope="col"><i class="material-icons"></i> Email</th>
           </tr>
         </thead>
         <tbody>
@@ -27,11 +26,10 @@
           {% if all_contacts %}
             {% for contact in all_contacts %}
               <tr>
-                <th scope="row"><a href="{% url 'update' contact.id %}"><i class="fa-solid fa-user-pen btn"></i></a></th>
-                <th scope="row"><a href="{% url 'deleteConf' contact.id %}"><i class="fa-solid fa-trash btn"></i></a></th>
+                <th scope="row"><a href="{% url 'update' contact.id %}"><i class="fa-solid fa-edit btn"></i></a></th>
+                <th scope="row"><a href="{% url 'deleteConf' contact.id %}"><i class="fa-solid fa-trash-alt btn"></i></a></th>
                 <td><a href="{% url 'details' contact.id %}" style="text-decoration: none;">{{contact.contact_name}}</a></td>
                 <td>{{contact.contact_email}}</td>
-                <td>{{contact.created_time}}</td>
               </tr>
             {% endfor %}
           {% endif %}
