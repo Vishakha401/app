@@ -7,7 +7,7 @@
     <p></p></br></br>
 <h1 style="text-align: center; color: black;" class="mb-5">Delete Contact</h1>
 
-<h5 style="text-align: center;" class="mb-2">  Do you wish to delete the contact : {{ curr_contact.contact_name }}?</h5>
+<h5 style="text-align: center;" class="mb-2"> Do you wish to delete the contact : {{ curr_contact.contact_name }}?</h5>
 <div style="display: flex; justify-content: center;">
     <a href="{% url 'delete' curr_contact.id %}" class="btn btn-danger m-2">Yes - Delete</a>
     <a href="{% url 'home' %}" class="btn m-2" style="color:white;border: 2px solid white;background:green" >No - Go back</a>
