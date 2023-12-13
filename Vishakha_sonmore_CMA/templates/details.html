@@ -12,6 +12,7 @@
         <h5>Created Time: </h5> <h5 style="margin-left: 10%">{{ curr_contact.created_time }}</h5>
     </div>
 </div>
+
 <div style="display: flex; justify-content: left;">
     <a class="btn m-2" style="background-color: #167D7F; color: white;" href="{% url 'home' %}">Home</a>
     <a class="btn m-2" style="border: 2px solid black;" href="{% url 'update' curr_contact.id %}">Edit</a>
