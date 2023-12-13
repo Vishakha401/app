@@ -19,6 +19,7 @@
             <th scope="col" colspan="2" style="text-align: center;"><i class="material-icons"></i> Actions</th>
             <th scope="col"><i class="material-icons"></i> Contact Name</th>
             <th scope="col"><i class="material-icons"></i> Email</th>
+            <th scope="col">Created/Last updated Time</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +30,7 @@
                 <th scope="row"><a href="{% url 'deleteConf' contact.id %}"><i class="fa-solid fa-trash-alt btn"></i></a></th>
                 <td><a href="{% url 'details' contact.id %}" style="text-decoration: none;">{{contact.contact_name}}</a></td>
                 <td>{{contact.contact_email}}</td>
+                <td>{{contact.created_time}}</td>
               </tr>
             {% endfor %}
           {% endif %}
